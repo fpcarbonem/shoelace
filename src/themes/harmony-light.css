@@ -1,0 +1,42 @@
+:root,
+:host,
+.sl-theme-harmony-light {
+  color-scheme: light;
+
+  /* Harmony fonts */
+  --sl-font-sans: 'Lexend', sans-serif;
+  --sl-font-weight-light: 300;
+  --sl-font-weight-normal: 400;
+  --sl-font-weight-semibold: 500;
+  --sl-font-weight-bold: 600;
+
+  /* Brand color */
+  --sl-color-primary-50: #30659f;
+  --sl-color-primary-100: #30659f;
+  --sl-color-primary-200: #30659f;
+  --sl-color-primary-300: #30659f;
+  --sl-color-primary-400: #30659f;
+  --sl-color-primary-500: #30659f;
+  --sl-color-primary-600: #30659f;
+  --sl-color-primary-700: #30659f;
+  --sl-color-primary-800: #30659f;
+  --sl-color-primary-900: #30659f;
+  --sl-color-primary-950: #30659f;
+
+  /* Status colors */
+  --sl-color-success-600: #17a871;
+  --sl-color-warning-600: #ffb020;
+  --sl-color-danger-600: #d83148;
+  --sl-color-info-600: #3366ff;
+
+  /* Neutral palette */
+  --sl-color-neutral-0: #ffffff;
+  --sl-color-neutral-50: #edf0f6;
+  --sl-color-neutral-100: #bfc6d4;
+  --sl-color-neutral-900: #373f4e;
+
+  /* Border radius */
+  --sl-border-radius-small: 2px;
+  --sl-border-radius-medium: 8px;
+  --sl-border-radius-large: 16px;
+}
