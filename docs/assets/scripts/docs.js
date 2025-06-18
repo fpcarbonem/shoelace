@@ -85,7 +85,7 @@
     if (theme === 'auto') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-    return theme === 'dark';
+    return theme === 'dark' || theme === 'harmony-dark';
   }
 
   function setTheme(newTheme) {
@@ -95,8 +95,18 @@
     // Update the UI
     updateSelection();
 
-    // Toggle the dark mode class
-    document.documentElement.classList.toggle('sl-theme-dark', isDark());
+    // Remove all theme classes
+    document.documentElement.classList.remove('sl-theme-dark', 'sl-theme-harmony-light', 'sl-theme-harmony-dark');
+
+    // Apply the appropriate theme class
+    if (theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('sl-theme-dark');
+    } else if (theme === 'harmony-light') {
+      document.documentElement.classList.add('sl-theme-harmony-light');
+    } else if (theme === 'harmony-dark') {
+      document.documentElement.classList.add('sl-theme-harmony-dark');
+    }
+    // Default light theme doesn't need a class
   }
 
   function updateSelection() {

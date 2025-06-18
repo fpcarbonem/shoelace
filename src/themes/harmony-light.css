@@ -1,44 +1,249 @@
-@import url('/harmony/CSS');
+@import url('./harmony-foundation.css');
 
 :root,
 :host,
 .sl-theme-harmony-light {
   color-scheme: light;
 
-  /* Harmony fonts */
-  --sl-font-sans: 'Lexend', sans-serif;
+  /*
+   * Foundation tokens are imported from harmony-foundation.css
+   * These provide the base design system variables
+   */
+
+  /*
+   * Color Primitives - Harmony Brand Colors
+   */
+
+  /* Gray/Neutral - mapped to Harmony neutral palette */
+  --sl-color-gray-50: var(--common-colors-white-fff-light-mode);
+  --sl-color-gray-100: var(--common-colors-page-bg-light-mode);
+  --sl-color-gray-200: var(--common-colors-stroke-weak-inactive-light-mode);
+  --sl-color-gray-300: var(--common-colors-stroke-strong-light-mode);
+  --sl-color-gray-400: var(--common-colors-grey-98a3bd-light-mode);
+  --sl-color-gray-500: var(--common-colors-text-paragraph-light-mode);
+  --sl-color-gray-600: var(--common-colors-text-header-light-mode);
+  --sl-color-gray-700: var(--common-colors-text-header-light-mode);
+  --sl-color-gray-800: var(--common-colors-footer-bg-light-mode);
+  --sl-color-gray-900: var(--common-colors-black-0a0e15-light-mode);
+  --sl-color-gray-950: var(--common-colors-black-0a0e15-light-mode);
+
+  /* Primary - Create gradient from Harmony brand colors */
+  --sl-color-primary-50: hsl(214 48% 96%);
+  --sl-color-primary-100: hsl(214 48% 90%);
+  --sl-color-primary-200: hsl(214 48% 82%);
+  --sl-color-primary-300: hsl(214 48% 70%);
+  --sl-color-primary-400: hsl(214 48% 58%);
+  --sl-color-primary-500: var(--brand-colors-brand-main-light-mode); /* #30659f */
+  --sl-color-primary-600: var(--brand-colors-brand-link-light-mode); /* #254e7a */
+  --sl-color-primary-700: hsl(214 51% 35%);
+  --sl-color-primary-800: hsl(214 51% 28%);
+  --sl-color-primary-900: hsl(214 51% 22%);
+  --sl-color-primary-950: hsl(214 51% 16%);
+
+  /* Success - Create gradient from Harmony success color */
+  --sl-color-success-50: hsl(158 45% 96%);
+  --sl-color-success-100: hsl(158 45% 88%);
+  --sl-color-success-200: hsl(158 45% 78%);
+  --sl-color-success-300: hsl(158 45% 65%);
+  --sl-color-success-400: hsl(158 45% 52%);
+  --sl-color-success-500: hsl(158 45% 42%);
+  --sl-color-success-600: var(--alerts-success-light-mode); /* #17a871 */
+  --sl-color-success-700: hsl(158 72% 30%);
+  --sl-color-success-800: hsl(158 72% 24%);
+  --sl-color-success-900: hsl(158 72% 20%);
+  --sl-color-success-950: hsl(158 72% 14%);
+
+  /* Warning - Create gradient from Harmony warning color */
+  --sl-color-warning-50: hsl(38 100% 96%);
+  --sl-color-warning-100: hsl(38 100% 88%);
+  --sl-color-warning-200: hsl(38 100% 78%);
+  --sl-color-warning-300: hsl(38 100% 68%);
+  --sl-color-warning-400: hsl(38 100% 58%);
+  --sl-color-warning-500: hsl(38 100% 52%);
+  --sl-color-warning-600: var(--alerts-warning-light-mode); /* #ffb020 */
+  --sl-color-warning-700: hsl(38 100% 42%);
+  --sl-color-warning-800: hsl(38 100% 32%);
+  --sl-color-warning-900: hsl(38 100% 24%);
+  --sl-color-warning-950: hsl(38 100% 16%);
+
+  /* Danger - Create gradient from Harmony error color */
+  --sl-color-danger-50: hsl(354 70% 96%);
+  --sl-color-danger-100: hsl(354 70% 90%);
+  --sl-color-danger-200: hsl(354 70% 82%);
+  --sl-color-danger-300: hsl(354 70% 72%);
+  --sl-color-danger-400: hsl(354 70% 62%);
+  --sl-color-danger-500: hsl(354 70% 52%);
+  --sl-color-danger-600: var(--alerts-error-light-mode); /* #d83148 */
+  --sl-color-danger-700: hsl(354 70% 38%);
+  --sl-color-danger-800: hsl(354 70% 30%);
+  --sl-color-danger-900: hsl(354 70% 24%);
+  --sl-color-danger-950: hsl(354 70% 16%);
+
+  /* Info - Create gradient from Harmony info color */
+  --sl-color-info-50: hsl(225 100% 96%);
+  --sl-color-info-100: hsl(225 100% 90%);
+  --sl-color-info-200: hsl(225 100% 82%);
+  --sl-color-info-300: hsl(225 100% 72%);
+  --sl-color-info-400: hsl(225 100% 65%);
+  --sl-color-info-500: hsl(225 100% 58%);
+  --sl-color-info-600: var(--alerts-info-light-mode); /* #3366ff */
+  --sl-color-info-700: hsl(225 100% 45%);
+  --sl-color-info-800: hsl(225 100% 35%);
+  --sl-color-info-900: hsl(225 100% 28%);
+  --sl-color-info-950: hsl(225 100% 20%);
+
+  /* Neutral - Use Harmony neutral colors */
+  --sl-color-neutral-0: var(--common-colors-white-fff-light-mode);
+  --sl-color-neutral-50: var(--common-colors-page-bg-light-mode);
+  --sl-color-neutral-100: var(--common-colors-stroke-weak-inactive-light-mode);
+  --sl-color-neutral-200: var(--common-colors-stroke-strong-light-mode);
+  --sl-color-neutral-300: var(--common-colors-grey-98a3bd-light-mode);
+  --sl-color-neutral-400: var(--common-colors-text-paragraph-light-mode);
+  --sl-color-neutral-500: var(--common-colors-text-paragraph-light-mode);
+  --sl-color-neutral-600: var(--common-colors-text-header-light-mode);
+  --sl-color-neutral-700: var(--common-colors-text-header-light-mode);
+  --sl-color-neutral-800: var(--common-colors-footer-bg-light-mode);
+  --sl-color-neutral-900: var(--common-colors-black-0a0e15-light-mode);
+  --sl-color-neutral-950: var(--common-colors-black-0a0e15-light-mode);
+  --sl-color-neutral-1000: var(--common-colors-black-0a0e15-light-mode);
+
+  /*
+   * Typography - Use Harmony font system
+   */
+  --sl-font-sans: var(--fonts-family-default), sans-serif;
+  --sl-font-serif: Georgia, 'Times New Roman', serif;
+  --sl-font-mono: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Font sizes - map to Harmony typography scale */
+  --sl-font-size-2x-small: var(--fonts-size-micro-rem);
+  --sl-font-size-x-small: var(--fonts-size-micro-rem);
+  --sl-font-size-small: var(--fonts-size-small-rem);
+  --sl-font-size-medium: var(--fonts-size-default-rem);
+  --sl-font-size-large: var(--fonts-size-large-rem);
+  --sl-font-size-x-large: var(--fonts-size-xl-rem);
+  --sl-font-size-2x-large: var(--fonts-size-3xl-rem);
+  --sl-font-size-3x-large: var(--fonts-size-4xl-rem);
+  --sl-font-size-4x-large: var(--fonts-size-huge-rem);
+
+  /* Font weights - use Harmony weights aligned with Shoelace */
   --sl-font-weight-light: 300;
   --sl-font-weight-normal: 400;
   --sl-font-weight-semibold: 500;
-  --sl-font-weight-bold: 600;
+  --sl-font-weight-bold: 700;
 
-  /* Brand color */
-  --sl-color-primary-50: #30659f;
-  --sl-color-primary-100: #30659f;
-  --sl-color-primary-200: #30659f;
-  --sl-color-primary-300: #30659f;
-  --sl-color-primary-400: #30659f;
-  --sl-color-primary-500: #30659f;
-  --sl-color-primary-600: #30659f;
-  --sl-color-primary-700: #30659f;
-  --sl-color-primary-800: #30659f;
-  --sl-color-primary-900: #30659f;
-  --sl-color-primary-950: #30659f;
+  /*
+   * Spacing - Use Harmony spacing scale
+   */
+  --sl-spacing-3x-small: var(--spacing-micro-rem-ppm);
+  --sl-spacing-2x-small: var(--spacing-tiny-rem-ppm);
+  --sl-spacing-x-small: var(--spacing-xsmall-rem-ppm);
+  --sl-spacing-small: var(--spacing-small-rem-ppm);
+  --sl-spacing-medium: var(--spacing-regular-rem-ppm);
+  --sl-spacing-large: var(--spacing-large-rem-ppm);
+  --sl-spacing-x-large: var(--spacing-xlarge-rem-ppm);
+  --sl-spacing-2x-large: var(--spacing-xxlarge-rem-ppm);
+  --sl-spacing-3x-large: var(--spacing-xxxlarge-rem-ppm);
+  --sl-spacing-4x-large: var(--spacing-xxxlarge-rem-ppm);
 
-  /* Status colors */
-  --sl-color-success-600: #17a871;
-  --sl-color-warning-600: #ffb020;
-  --sl-color-danger-600: #d83148;
-  --sl-color-info-600: #3366ff;
+  /*
+   * Border Radius - Use Harmony radius scale
+   */
+  --sl-border-radius-small: var(--radius-micro-rem-ppm);
+  --sl-border-radius-medium: var(--radius-small-rem-ppm);
+  --sl-border-radius-large: var(--radius-medium-rem-ppm);
+  --sl-border-radius-x-large: var(--radius-large-rem-ppm);
+  --sl-border-radius-circle: 50%;
+  --sl-border-radius-pill: 9999px;
 
-  /* Neutral palette */
-  --sl-color-neutral-0: #ffffff;
-  --sl-color-neutral-50: #edf0f6;
-  --sl-color-neutral-100: #bfc6d4;
-  --sl-color-neutral-900: #373f4e;
+  /*
+   * Shadows - Use Harmony elevation system
+   */
+  --sl-shadow-x-small: 0 1px 2px var(--common-colors-elevation-a-light-mode);
+  --sl-shadow-small: 0 1px 2px var(--common-colors-elevation-b-light-mode);
+  --sl-shadow-medium: 0 2px 4px var(--common-colors-elevation-c-light-mode);
+  --sl-shadow-large: 0 2px 8px var(--common-colors-elevation-d-light-mode);
+  --sl-shadow-x-large: 0 4px 16px var(--common-colors-elevation-e-light-mode);
 
-  /* Border radius */
-  --sl-border-radius-small: 2px;
-  --sl-border-radius-medium: 8px;
-  --sl-border-radius-large: 16px;
+  /*
+   * Focus Ring - Use Harmony brand focus
+   */
+  --sl-focus-ring-color: var(--brand-colors-focus-ring-light-mode);
+  --sl-focus-ring-style: solid;
+  --sl-focus-ring-width: 3px;
+  --sl-focus-ring: var(--sl-focus-ring-style) var(--sl-focus-ring-width) var(--sl-focus-ring-color);
+  --sl-focus-ring-offset: 1px;
+
+  /*
+   * Form Controls - Use Harmony form styling
+   */
+
+  /* Input heights - map to Harmony height scale */
+  --sl-input-height-small: var(--height-compact-rem-ppm);
+  --sl-input-height-medium: var(--height-normal-rem-ppm);
+  --sl-input-height-large: var(--height-big-rem-ppm);
+
+  /* Input colors and backgrounds */
+  --sl-input-background-color: var(--common-colors-input-background-light-mode);
+  --sl-input-background-color-hover: var(--common-colors-input-background-light-mode);
+  --sl-input-background-color-focus: var(--common-colors-input-background-light-mode);
+  --sl-input-background-color-disabled: var(--common-colors-stroke-weak-inactive-light-mode);
+
+  --sl-input-border-color: var(--common-colors-stroke-strong-light-mode);
+  --sl-input-border-color-hover: var(--common-colors-stroke-strong-light-mode);
+  --sl-input-border-color-focus: var(--brand-colors-brand-main-light-mode);
+  --sl-input-border-color-disabled: var(--common-colors-stroke-weak-inactive-light-mode);
+
+  --sl-input-color: var(--common-colors-text-header-light-mode);
+  --sl-input-color-hover: var(--common-colors-text-header-light-mode);
+  --sl-input-color-focus: var(--common-colors-text-header-light-mode);
+  --sl-input-color-disabled: var(--common-colors-text-paragraph-light-mode);
+
+  --sl-input-placeholder-color: var(--common-colors-text-paragraph-light-mode);
+  --sl-input-placeholder-color-disabled: var(--common-colors-stroke-strong-light-mode);
+
+  --sl-input-focus-ring-color: var(--brand-colors-focus-ring-light-mode);
+
+  /*
+   * Button Styling - Use Harmony button system
+   */
+  --sl-button-font-size-small: var(--fonts-size-small-rem);
+  --sl-button-font-size-medium: var(--fonts-size-default-rem);
+  --sl-button-font-size-large: var(--fonts-size-medium-rem);
+
+  /*
+   * Panels and Overlays
+   */
+  --sl-panel-background-color: var(--common-colors-card-bg-light-mode);
+  --sl-panel-border-color: var(--common-colors-card-stroke-light-mode);
+  --sl-panel-border-width: 1px;
+
+  --sl-overlay-background-color: var(--common-colors-elevation-g-light-mode);
+
+  /*
+   * Tooltips
+   */
+  --sl-tooltip-background-color: var(--common-colors-tooltip-light-mode);
+  --sl-tooltip-color: var(--common-colors-white-fff-light-mode);
+  --sl-tooltip-border-radius: var(--radius-tiny-rem-ppm);
+  --sl-tooltip-font-family: var(--fonts-family-default);
+  --sl-tooltip-font-size: var(--fonts-size-small-rem);
+  --sl-tooltip-padding: var(--spacing-tiny-rem-ppm) var(--spacing-xsmall-rem-ppm);
+
+  /*
+   * Transitions - Keep Shoelace defaults
+   */
+  --sl-transition-x-slow: 1000ms;
+  --sl-transition-slow: 500ms;
+  --sl-transition-medium: 250ms;
+  --sl-transition-fast: 150ms;
+  --sl-transition-x-fast: 50ms;
+
+  /*
+   * Z-indexes - Keep Shoelace defaults
+   */
+  --sl-z-index-drawer: 700;
+  --sl-z-index-dialog: 800;
+  --sl-z-index-dropdown: 900;
+  --sl-z-index-toast: 950;
+  --sl-z-index-tooltip: 1000;
 }

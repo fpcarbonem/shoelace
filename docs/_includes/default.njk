@@ -14,6 +14,11 @@
     {# Opt out of Turbo caching #}
     <meta name="turbo-cache-control">
 
+    {# Fonts #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     {# Stylesheets #}
     <link rel="stylesheet" href="{{ assetUrl('styles/docs.css') }}" />
     <link rel="stylesheet" href="{{ assetUrl('styles/code-previews.css') }}" />
@@ -45,7 +50,19 @@
       (() => {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const theme = localStorage.getItem('theme') || 'auto';
-        document.documentElement.classList.toggle('sl-theme-dark', theme === 'dark' || (theme === 'auto' && prefersDark));
+        
+        // Remove all theme classes first
+        document.documentElement.classList.remove('sl-theme-dark', 'sl-theme-harmony-light', 'sl-theme-harmony-dark');
+        
+        // Apply the appropriate theme class
+        if (theme === 'dark' || (theme === 'auto' && prefersDark)) {
+          document.documentElement.classList.add('sl-theme-dark');
+        } else if (theme === 'harmony-light') {
+          document.documentElement.classList.add('sl-theme-harmony-light');
+        } else if (theme === 'harmony-dark') {
+          document.documentElement.classList.add('sl-theme-harmony-dark');
+        }
+        // Default light theme doesn't need a class
       })();
     </script>
 
@@ -91,6 +108,9 @@
         <sl-menu>
           <sl-menu-item type="checkbox" value="light">Light</sl-menu-item>
           <sl-menu-item type="checkbox" value="dark">Dark</sl-menu-item>
+          <sl-divider></sl-divider>
+          <sl-menu-item type="checkbox" value="harmony-light">Harmony Light</sl-menu-item>
+          <sl-menu-item type="checkbox" value="harmony-dark">Harmony Dark</sl-menu-item>
           <sl-divider></sl-divider>
           <sl-menu-item type="checkbox" value="auto">System</sl-menu-item>
         </sl-menu>

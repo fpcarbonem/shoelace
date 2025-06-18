@@ -1,0 +1,30 @@
+
+> @shoelace-style/shoelace@2.20.1 start
+> node scripts/build.js --serve
+
+- Cleaning up the previous build
+✔ Cleaning up the previous build
+- Generating component metadata
+✔ Generating component metadata
+- Wrapping components for React
+✔ Wrapping components for React
+- Generating themes
+✔ Generating themes
+- Packaging up icons
+✔ Packaging up icons
+- Running the TypeScript compiler
+✔ Running the TypeScript compiler
+- Themes, Icons, and TS Types to "cdn"
+✔ Themes, Icons, and TS Types to "cdn"
+- Building source files
+✔ Building source files
+- Building docs
+✔ Building docs
+
+🥾 The dev server is available at http://localhost:4000
+
+[11ty] Copied 32 files / Wrote 87 files in 50.68 seconds (582.5ms each, v2.0.1)
+[11ty] Watching…
+
+[11ty] Benchmark  20248ms  23%    87× (Configuration) "html-transform" Transform
+
