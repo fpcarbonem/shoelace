@@ -100,6 +100,11 @@ button:focus-visible {
   color: var(--sl-color-neutral-900);
 }
 
+/* Improve contrast for the Harmony light theme */
+.sl-theme-harmony-light ::selection {
+  color: var(--sl-color-neutral-0);
+}
+
 /* Show custom elements only after they're registered */
 :not(:defined),
 :not(:defined) * {
