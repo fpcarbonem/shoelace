@@ -1,162 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="sl-theme-harmony-light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shoelace Harmony Theme Demo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/themes/harmony-light.css">
-  <script type="module" src="dist/shoelace-autoloader.js"></script>
-  <style>
-    body {
-      font-family: var(--sl-font-sans);
-      padding: 2rem;
-      background: var(--sl-color-neutral-0);
-      color: var(--sl-color-neutral-1000);
-    }
-    .demo-section {
-      margin-bottom: 3rem;
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1000;
-    }
-    .component-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="theme-toggle">
-    <sl-button-group>
-      <sl-button onclick="setTheme('harmony-light')" variant="primary">Light</sl-button>
-      <sl-button onclick="setTheme('harmony-dark')" variant="primary">Dark</sl-button>
-    </sl-button-group>
-  </div>
-
-  <div class="demo-section">
-    <h1>Shoelace Harmony Theme Demo</h1>
-    <p>This demo showcases Shoelace components using the Harmony theme, featuring the Lexend font and custom color palette.</p>
-  </div>
-
-  <div class="demo-section">
-    <h2>Buttons</h2>
-    <div class="component-grid">
-      <div>
-        <h3>Primary Buttons</h3>
-        <sl-button variant="primary">Primary Button</sl-button>
-        <sl-button variant="primary" size="small">Small</sl-button>
-        <sl-button variant="primary" size="large">Large</sl-button>
-      </div>
-      <div>
-        <h3>Button Variants</h3>
-        <sl-button variant="default">Default</sl-button>
-        <sl-button variant="success">Success</sl-button>
-        <sl-button variant="warning">Warning</sl-button>
-        <sl-button variant="danger">Danger</sl-button>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoelace Harmony Theme Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/themes/harmony-light.css" />
+    <script type="module" src="dist/shoelace-autoloader.js"></script>
+    <style>
+      body {
+        font-family: var(--sl-font-sans);
+        padding: 2rem;
+        background: var(--sl-color-neutral-0);
+        color: var(--sl-color-neutral-1000);
+      }
+      .demo-section {
+        margin-bottom: 3rem;
+      }
+      .theme-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+      }
+      .component-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="theme-toggle">
+      <sl-button-group>
+        <sl-button onclick="setTheme('harmony-light')" variant="primary">Light</sl-button>
+        <sl-button onclick="setTheme('harmony-dark')" variant="primary">Dark</sl-button>
+      </sl-button-group>
     </div>
-  </div>
 
-  <div class="demo-section">
-    <h2>Form Controls</h2>
-    <div class="component-grid">
-      <div>
-        <sl-input label="Input Field" placeholder="Enter text here"></sl-input>
-        <br><br>
-        <sl-select label="Select Option">
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
-      </div>
-      <div>
-        <sl-checkbox>Checkbox Option</sl-checkbox>
-        <br><br>
-        <sl-switch>Switch Control</sl-switch>
-        <br><br>
-        <sl-range label="Range Slider" min="0" max="100" value="50"></sl-range>
-      </div>
+    <div class="demo-section">
+      <h1>Shoelace Harmony Theme Demo</h1>
+      <p>
+        This demo showcases Shoelace components using the Harmony theme, featuring the Lexend font and custom color
+        palette.
+      </p>
     </div>
-  </div>
 
-  <div class="demo-section">
-    <h2>Cards & Layout</h2>
-    <div class="component-grid">
-      <sl-card class="card-overview">
-        <div slot="header">
-          <strong>Harmony Theme Card</strong>
+    <div class="demo-section">
+      <h2>Buttons</h2>
+      <div class="component-grid">
+        <div>
+          <h3>Primary Buttons</h3>
+          <sl-button variant="primary">Primary Button</sl-button>
+          <sl-button variant="primary" size="small">Small</sl-button>
+          <sl-button variant="primary" size="large">Large</sl-button>
         </div>
-        This card demonstrates the Harmony theme's custom border radius and color scheme.
-        <div slot="footer">
-          <sl-button variant="primary" size="small">Action</sl-button>
+        <div>
+          <h3>Button Variants</h3>
+          <sl-button variant="default">Default</sl-button>
+          <sl-button variant="success">Success</sl-button>
+          <sl-button variant="warning">Warning</sl-button>
+          <sl-button variant="danger">Danger</sl-button>
         </div>
-      </sl-card>
-      
-      <sl-card>
-        <div slot="header">
-          <sl-badge variant="primary">New</sl-badge>
-          <strong>Feature Card</strong>
-        </div>
-        <sl-avatar label="User avatar" style="--size: 3rem; margin-bottom: 1rem;"></sl-avatar>
-        <p>Components inherit the Lexend font family and Harmony color palette.</p>
-        <sl-button variant="success" size="small">Learn More</sl-button>
-      </sl-card>
-    </div>
-  </div>
-
-  <div class="demo-section">
-    <h2>Navigation & Interaction</h2>
-    <div class="component-grid">
-      <div>
-        <sl-tab-group>
-          <sl-tab slot="nav" panel="general">General</sl-tab>
-          <sl-tab slot="nav" panel="custom">Custom</sl-tab>
-          <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
-
-          <sl-tab-panel name="general">
-            <p>General settings with Harmony styling.</p>
-          </sl-tab-panel>
-          <sl-tab-panel name="custom">
-            <p>Custom options using the Harmony theme.</p>
-          </sl-tab-panel>
-          <sl-tab-panel name="advanced">
-            <p>Advanced configuration with Harmony colors.</p>
-          </sl-tab-panel>
-        </sl-tab-group>
-      </div>
-      
-      <div>
-        <sl-alert variant="primary" open>
-          <sl-icon slot="icon" name="info-circle"></sl-icon>
-          <strong>Harmony Theme Active</strong><br>
-          You're viewing components with the Harmony color scheme and Lexend typography.
-        </sl-alert>
       </div>
     </div>
-  </div>
 
-  <script>
-    function setTheme(theme) {
-      const html = document.documentElement;
-      const link = document.querySelector('link[href*="harmony"]');
-      
-      // Remove existing theme classes
-      html.classList.remove('sl-theme-harmony-light', 'sl-theme-harmony-dark');
-      
-      // Add new theme class
-      html.classList.add(`sl-theme-${theme}`);
-      
-      // Update stylesheet
-      link.href = `dist/themes/${theme}.css`;
-    }
-  </script>
-</body>
+    <div class="demo-section">
+      <h2>Form Controls</h2>
+      <div class="component-grid">
+        <div>
+          <sl-input label="Input Field" placeholder="Enter text here"></sl-input>
+          <br /><br />
+          <sl-select label="Select Option">
+            <sl-option value="option-1">Option 1</sl-option>
+            <sl-option value="option-2">Option 2</sl-option>
+            <sl-option value="option-3">Option 3</sl-option>
+          </sl-select>
+        </div>
+        <div>
+          <sl-checkbox>Checkbox Option</sl-checkbox>
+          <br /><br />
+          <sl-switch>Switch Control</sl-switch>
+          <br /><br />
+          <sl-range label="Range Slider" min="0" max="100" value="50"></sl-range>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>Cards & Layout</h2>
+      <div class="component-grid">
+        <sl-card class="card-overview">
+          <div slot="header">
+            <strong>Harmony Theme Card</strong>
+          </div>
+          This card demonstrates the Harmony theme's custom border radius and color scheme.
+          <div slot="footer">
+            <sl-button variant="primary" size="small">Action</sl-button>
+          </div>
+        </sl-card>
+
+        <sl-card>
+          <div slot="header">
+            <sl-badge variant="primary">New</sl-badge>
+            <strong>Feature Card</strong>
+          </div>
+          <sl-avatar label="User avatar" style="--size: 3rem; margin-bottom: 1rem"></sl-avatar>
+          <p>Components inherit the Lexend font family and Harmony color palette.</p>
+          <sl-button variant="success" size="small">Learn More</sl-button>
+        </sl-card>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>Navigation & Interaction</h2>
+      <div class="component-grid">
+        <div>
+          <sl-tab-group>
+            <sl-tab slot="nav" panel="general">General</sl-tab>
+            <sl-tab slot="nav" panel="custom">Custom</sl-tab>
+            <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
+
+            <sl-tab-panel name="general">
+              <p>General settings with Harmony styling.</p>
+            </sl-tab-panel>
+            <sl-tab-panel name="custom">
+              <p>Custom options using the Harmony theme.</p>
+            </sl-tab-panel>
+            <sl-tab-panel name="advanced">
+              <p>Advanced configuration with Harmony colors.</p>
+            </sl-tab-panel>
+          </sl-tab-group>
+        </div>
+
+        <div>
+          <sl-alert variant="primary" open>
+            <sl-icon slot="icon" name="info-circle"></sl-icon>
+            <strong>Harmony Theme Active</strong><br />
+            You're viewing components with the Harmony color scheme and Lexend typography.
+          </sl-alert>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function setTheme(theme) {
+        const html = document.documentElement;
+        const link = document.querySelector('link[href*="harmony"]');
+
+        // Remove existing theme classes
+        html.classList.remove('sl-theme-harmony-light', 'sl-theme-harmony-dark');
+
+        // Add new theme class
+        html.classList.add(`sl-theme-${theme}`);
+
+        // Update stylesheet
+        link.href = `dist/themes/${theme}.css`;
+      }
+    </script>
+  </body>
 </html>

@@ -175,7 +175,7 @@
   /*
    * Form Controls - Use Harmony form styling (dark mode)
    */
-  
+
   /* Input heights - map to Harmony height scale (same as light) */
   --sl-input-height-small: var(--height-compact-rem-ppm);
   --sl-input-height-medium: var(--height-normal-rem-ppm);
