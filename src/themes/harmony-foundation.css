@@ -159,6 +159,7 @@
   --fonts-size-huge-rem: 4.5rem;
 
   /* HARMONY MAIN COLOR MAPPINGS */
+  --main-colors-light-mode-main-color: var(--ppm-light-30659f-blue);
   --main-colors-light-mode-main-color-ppm: var(--ppm-light-30659f-blue);
   --main-colors-light-mode-text-paragraph-ppm: var(--global-light-646d82-text-weak);
   --main-colors-light-mode-tooltip-ppm: var(--global-light-tooltip-bg);
@@ -167,6 +168,7 @@
   --main-colors-light-mode-tree-highlight-ppm: var(--global-light-edf0f6-tree-highlight);
   --main-colors-light-mode-inactive-ppm: var(--global-light-e0e4eb-stroke-weak);
   --main-colors-light-mode-blue-button-ppm: var(--global-light-043852-blue-button);
+  --main-colors-light-mode-link: var(--ppm-light-254e7a-link);
   --main-colors-light-mode-link-ppm: var(--ppm-light-254e7a-link);
   --main-colors-light-mode-page-bg-ppm: var(--global-light-edf0f6-page-bg);
   --main-colors-light-mode-footer-bg-ppm: var(--global-light-212631-footer);
@@ -178,9 +180,11 @@
   --main-colors-dark-mode-tooltip-ppm: var(--global-dark-tooltip-bg);
   --main-colors-dark-mode-text-header-ppm: var(--global-dark-373f4e-text-strong);
   --main-colors-dark-mode-text-paragraph-ppm: var(--global-dark-667085-text-weak);
+  --main-colors-dark-mode-main-color: var(--ppm-dark-30659f-blue);
   --main-colors-dark-mode-main-color-ppm: var(--ppm-dark-30659f-blue);
   --main-colors-dark-mode-main-color-20-ppm: var(--ppm-dark-30659f-blue-20);
   --main-colors-dark-mode-blue-button-ppm: var(--global-dark-043852-blue-button);
+  --main-colors-dark-mode-link: var(--ppm-dark-254e7a-link);
   --main-colors-dark-mode-link-ppm: var(--ppm-dark-254e7a-link);
   --main-colors-dark-mode-footer-bg-ppm: var(--global-dark-212631-footer);
   --main-colors-dark-mode-page-bg-ppm: var(--global-dark-edf0f6-page-bg);
